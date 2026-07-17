@@ -1,3 +1,4 @@
+import { useEffect, useState } from "react"
 import RecycleBinIcon from "../assets/pc-icons/recycle-bin-icon.png" 
 import GoogleLogo from "../assets/pc-icons/google_icon.png"
 import EdgeLogo from "../assets/pc-icons/edge-logo.png"
@@ -9,6 +10,24 @@ import WifiIcon from "../assets/pc-icons/wifi-icon.png"
 import BatteryIcon from "../assets/pc-icons/battery-icon.png"
 
 const PcHomePage: React.FC = () => {
+  const [currentDateTime, setCurrentDateTime] 
+    = useState(new Date());
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setCurrentDateTime(new Date());
+    }, 1000);
+
+    return () => clearInterval(interval);
+  }, []);
+
+  const currentTime = currentDateTime.toLocaleTimeString([], {
+    hour: "2-digit",
+    minute: "2-digit"
+  })
+  const currentDate = `${currentDateTime.getFullYear()}/${String(
+    currentDateTime.getMonth() + 1
+  ).padStart(2, "0")}/${String(currentDateTime.getDate()).padStart(2, "0")}`;
   return(
     <div className="flex flex-col overflow-hidden min-h-screen max-h-screen">
       <div
@@ -138,12 +157,12 @@ const PcHomePage: React.FC = () => {
 
           </div>
 
-          <div>
-            <p>
-              {/*current-time*/}
+          <div className="text-white">
+            <p className="flex justify-end">
+              {currentTime}
             </p>
             <div>
-              {/*current: yyyy/mm/dd*/}
+              {currentDate}
             </div>
           </div>
           
