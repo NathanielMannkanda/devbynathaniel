@@ -8,6 +8,8 @@ import SearchIcon from "../assets/pc-icons/search-icon.png"
 import VolumeIcon from "../assets/pc-icons/volume-icon.png"
 import WifiIcon from "../assets/pc-icons/wifi-icon.png"
 import BatteryIcon from "../assets/pc-icons/battery-icon.png"
+import NotifIcon from "../assets/pc-icons/notification-icon.png"
+import ExpandArrow from "../assets/pc-icons/expand-arrow.png"
 
 const PcHomePage: React.FC = () => {
   const [currentDateTime, setCurrentDateTime] 
@@ -83,7 +85,7 @@ const PcHomePage: React.FC = () => {
 
        </div>
 
-       <div className="w-full h-full max-h-15 bg-zinc-900 absolute bottom-0 border-t border-zinc-500 pl-10 pt-5 pb-5 pr-10 flex items-center justify-between">
+       <div className="w-full h-full max-h-15 bg-zinc-900 absolute bottom-0 border-t border-zinc-500 pl-5 pt-5 pb-5 pr-5 flex items-center justify-between">
 
         <div className="flex flex-row items-center">
 
@@ -128,6 +130,14 @@ const PcHomePage: React.FC = () => {
         </div>
 
         <div className="flex flex-row items-center gap-3">
+
+          <div className="hover:bg-gray-400/10 w-12 h-12  items-center justify-center flex rounded-sm transition-all flex-col text-white">
+            <img 
+              src={ExpandArrow} 
+              alt=""
+              className="w-5 invert rotate-180 " 
+            />
+          </div>
           <div className="hover:bg-gray-400/10 w-12 h-12 p-3 items-center justify-center flex rounded-sm transition-all flex-col text-white">
             <p>
               ENG
@@ -157,13 +167,20 @@ const PcHomePage: React.FC = () => {
 
           </div>
 
-          <div className="text-white">
+          <div className="hover:bg-gray-400/10 w-fit h-12 p-3 items-center justify-center flex rounded-sm transition-all flex-row  gap-2 text-white">
+            <div>
             <p className="flex justify-end">
               {currentTime}
             </p>
-            <div>
+            <p>
               {currentDate}
+            </p>
             </div>
+            <img 
+              src={NotifIcon} 
+              alt="" 
+              className="invert w-7"
+            />
           </div>
           
         </div>
