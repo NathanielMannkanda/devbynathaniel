@@ -10,6 +10,9 @@ import WifiIcon from "../assets/pc-icons/wifi-icon.png"
 import BatteryIcon from "../assets/pc-icons/battery-icon.png"
 import NotifIcon from "../assets/pc-icons/notification-icon.png"
 import ExpandArrow from "../assets/pc-icons/expand-arrow.png"
+import OutLook from "../assets/pc-icons/outlook-icon.png"
+import FileExplorer from "../assets/pc-icons/file-icon.png"
+import NewDesktop from "../assets/pc-icons/new-desktop-icon.png"
 
 const PcHomePage: React.FC = () => {
   const [currentDateTime, setCurrentDateTime] 
@@ -81,6 +84,7 @@ const PcHomePage: React.FC = () => {
               My PC
             </p>
           </div>
+          
         </section>
 
        </div>
@@ -110,6 +114,22 @@ const PcHomePage: React.FC = () => {
               Search
             </a>
           </button>
+
+          <div className="hover:bg-gray-400/10 w-12 h-12 p-3 items-center justify-center flex rounded-sm transition-all">
+          <img 
+            src={NewDesktop} 
+            alt="" 
+            className="w-10 h-10 absolute"
+          />
+          </div>
+
+          <div className="hover:bg-gray-400/10 w-12 h-12 p-3 items-center justify-center flex rounded-sm transition-all">
+          <img 
+            src={FileExplorer} 
+            alt="" 
+            className="w-10 h-10 absolute"
+          />
+          </div>
           
           <div className="hover:bg-gray-400/10 w-12 h-12 p-3 items-center justify-center flex rounded-sm transition-all">
           <img 
@@ -122,6 +142,14 @@ const PcHomePage: React.FC = () => {
           <div className="hover:bg-gray-400/10 w-12 h-12 p-3 items-center justify-center flex rounded-sm transition-all">
           <img 
             src={EdgeLogo} 
+            alt="" 
+            className="w-10 h-10 absolute"
+          />
+          </div>
+
+          <div className="hover:bg-gray-400/10 w-12 h-12 p-3 items-center justify-center flex rounded-sm transition-all">
+          <img 
+            src={OutLook} 
             alt="" 
             className="w-10 h-10 absolute"
           />
