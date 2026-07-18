@@ -133,7 +133,9 @@ const PcHomePage: React.FC = () => {
         <div className="w-full h-full max-h-15 bg-zinc-900 absolute bottom-0 border-t border-zinc-500 pl-5 pt-5 pb-5 pr-5 flex items-center justify-between">
 
           <div className="flex flex-row items-center">
-
+            <p className="text-white text-2xl">
+              DevByNathaniel
+            </p>
           </div>
 
           <div className="flex flex-row gap-2 items-center">

@@ -24,8 +24,10 @@ const MatrixCodeRain: React.FC = () => {
 
     const latin = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
     const numbers = "0123456789";
+    const amharic = 
+      "ቈርትዩኢኦፖኢኡይትረውቈርትዩኢኦኣስድፍግህጅክልክጅህግፍድሳስድፍግህጅክዝኅችቭብንምኪኡይስግትፋድኅጋውህግጅብኅክግይድክህንህብችግስጀኣችብክሽግይቱአፍብህክፍግድቭጅቀብውክሃችስይግትጅግቭጅቀንጅድችብህጅንችልድህግይትጅቨብፍውክንቭስክምልድቪጆስምል";
 
-    const alphabet = katakana + latin + numbers;
+    const alphabet = katakana + latin + numbers + amharic;
 
     const fontSize = 16;
     let columns = Math.floor(canvas.width / fontSize);
