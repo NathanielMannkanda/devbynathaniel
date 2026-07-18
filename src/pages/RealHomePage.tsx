@@ -1,13 +1,17 @@
 import MatrixCodeRain from "../componenets/MatrixCodeRain";
+import { GridPattern } from "@/component/ui/grid-pattern";
 
 const RealHomePage = () => {
   return (
     <div className="relative min-h-screen overflow-hidden ">
       <MatrixCodeRain />
 
-      <div className="relative z-10 flex min-h-screen justify-center p-5">
+      <div className="relative z-10 flex flex-col xl:flex-row min-h-screen justify-center gap-3 p-5 md:items-center">
         {/*Left*/}
-        <div className="border border-emerald-600 w-150 h-230 mr-3 bg-black">
+        <div className="border border-emerald-600 bg-black
+          w-full xl:flex-1
+          max-w-150
+          h-150 xl:h-230">
           
         </div>
 
@@ -37,7 +41,7 @@ const RealHomePage = () => {
           </div>
 
           <div className="border border-emerald-600 w-full h-30 bg-black mb-3">
-          
+              <GridPattern />
           </div>
 
           <div className="border border-emerald-600 w-full mt-3 h-40 bg-black mb-3">
