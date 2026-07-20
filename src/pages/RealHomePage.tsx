@@ -6,7 +6,9 @@ import GithubLogo from "../assets/images/social-icons/github-logo.png";
 import LinkedInLogo from "../assets/images/social-icons/linkedin-logo.png";
 import EmailLogo from "../assets/images/social-icons/email-icon.png";
 import WhattsappLogo from "../assets/images/social-icons/whattsapp-icon.png";
+
 import WorkTracker from "../assets/images/thumbnails/work-tracker-thumbnail.png";
+import Ecommerce from "../assets/images/thumbnails/e-commerce-thumbnail.png"
 
 import Tailwind from "../assets/images/tech-icons/tailwind-icon.png";
 import TypeScript from "../assets/images/tech-icons/typescript-icon.png";
@@ -33,7 +35,7 @@ const RealHomePage = () => {
 
           <div className="border border-emerald-600 h-137 bg-black xl:h-216 xl:max-h-216 overflow-y-auto scrollbar-thin scrollbar-thumb-green-600 scrollbar-track-none p-5">
             
-            <div className="h-3000 text-[#00ff41]">
+            <div className="text-[#00ff41] mb-5 pb-5 border-emerald-600 border-b">
               <a 
                 href="https://work-tracker-five-beta.vercel.app/"
                 target='_blank'
@@ -78,7 +80,7 @@ const RealHomePage = () => {
 
                 <div className="flex gap-2 border p-1 border-blue-400 text-blue-200">
                   <img 
-                    src={React}
+                    src={Tailwind}
                     alt=""
                     className="h-6" 
                   />
@@ -104,7 +106,82 @@ const RealHomePage = () => {
               </div>
             </div>
 
+            <div className="text-[#00ff41] mb-5 pb-5 border-emerald-600 border-b">
+              <a 
+                href="https://work-tracker-five-beta.vercel.app/"
+                target='_blank'
+                >
+                <img 
+                  src={Ecommerce}
+                  alt=""
+                  className="border border-emerald-600 p-2 mb-3" 
+                  />
+              </a>
+              <h1 className="text-xl">
+                Project: E-commerce
+              </h1>
+              <a className="text-[#01b92f] ml-2">
+                Oct 2025 - Nov 2025
+              </a>
+              <p className="ml-4">
+                  Technology used:
+              </p>
+
+              <div className="flex gap-3 mt-2 mb-2 justify-center">
+                <div className="flex gap-2 border p-1 border-blue-600 text-blue-400">
+                  <img 
+                    src={React}
+                    alt=""
+                    className="h-6" 
+                  />
+                  <a>
+                    React
+                  </a>
+                </div>
+                <div className="flex gap-2 border p-1 border-blue-500 text-blue-400">
+                  <img 
+                    src={TypeScript}
+                    alt=""
+                    className="h-6" 
+                  />
+                  <a>
+                    TypeScript
+                  </a>
+                </div>
+
+                <div className="flex gap-2 border p-1 border-blue-400 text-blue-200">
+                  <img 
+                    src={Tailwind}
+                    alt=""
+                    className="h-6" 
+                  />
+                  <a>
+                    Tailwind
+                  </a>
+                </div>
+              </div>
+              <p>
+                  Project Info:
+              </p>
+              <div className="pl-3">
+                <p>
+                  ■ I created a interactive E-commerce site that can take an order and store it in the cart as.
+                </p>
+
+                <p>
+                  ■ I used a TypeScript to help with production error handling and reduce work load in case of errors working with the api.
+                </p>
+                <p>
+                  ■ I used React and Tailwind to style the website with reusable components.
+                </p>
+              </div>
+            </div>
+
+            
+
           </div>
+
+          
           
         </div>
 
