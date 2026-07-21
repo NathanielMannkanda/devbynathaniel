@@ -19,6 +19,10 @@ import Photopea from "../assets/images/tech-icons/photopea.png";
 import Firebase from "../assets/images/tech-icons/firebase-icon.png";
 import React from "../assets/images/tech-icons/react-icon.png";
 
+import CyberCity from "../assets/gifs/3d-cyber-city.gif"
+import CatWalking from "../assets/gifs/cat-walking.gif"
+import MentalCode from "../assets/gifs/mental-code.gif"
+
 const RealHomePage = () => {
   return (
     <div className="relative min-h-screen overflow-hidden ">
@@ -343,8 +347,29 @@ const RealHomePage = () => {
 
         {/*Middle*/}
         <div className="w-150 h-full max-h-230 mr-3">
-          <div className="border border-emerald-600 w-full h-90 bg-black mb-3">
-          
+          <div className="border border-emerald-600 text-[#00ff41] w-full h-90 bg-black mb-3 p-3 flex flex-row">
+            <img 
+              src={CyberCity} 
+              alt="" 
+              className="h-full border mr-3 p-2 border-emerald-600"
+              />
+              <div className="flex flex-col justify-between">
+              <img 
+              src={CatWalking} 
+              alt="" 
+              className=" border p-2 border-emerald-600 w-fit"
+              />
+
+              <p className="text-xl font-bold">
+                Welcome to the cyberworld
+              </p>
+
+              <img 
+                src={MentalCode} 
+                alt=""
+                className="border p-2 border-emerald-600" 
+                />
+              </div>
           </div>
 
           <div className="border border-emerald-600 w-full h-90 bg-black mb-3">
