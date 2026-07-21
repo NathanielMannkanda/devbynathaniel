@@ -18,14 +18,23 @@ import JavaScript from "../assets/images/tech-icons/javascript-icon.png";
 import Photopea from "../assets/images/tech-icons/photopea.png";
 import Firebase from "../assets/images/tech-icons/firebase-icon.png";
 import React from "../assets/images/tech-icons/react-icon.png";
+import Git from "../assets/images/tech-icons/git-icon.png";
+import MongoDB from "../assets/images/tech-icons/mongo-db.png";
+import Mongoose from "../assets/images/tech-icons/mongoose.png";
+import MySQL from "../assets/images/tech-icons/MySQL-Logo.png";
+import AdobeXD from "../assets/images/tech-icons/adobe-xd-logo.png";
+import NodeJsIcon from "../assets/images/tech-icons/nodejs.png"
 
 import CyberCity from "../assets/gifs/3d-cyber-city.gif"
 import CatWalking from "../assets/gifs/cat-walking.gif"
 import MentalCode from "../assets/gifs/mental-code.gif"
+import WaveCode from "../assets/gifs/virtual-waves.gif";
+import ScreenPNG from "../assets/images/screen-png.png"
+import Wires from "../assets/images/wires.jpg"
 
 const RealHomePage = () => {
   return (
-    <div className="relative min-h-screen overflow-hidden ">
+    <div className="relative min-h-screen overflow-hidden">
       <GridPattern />
       <MatrixCodeRain />
 
@@ -319,6 +328,16 @@ const RealHomePage = () => {
                     Tailwind
                   </a>
                 </div>
+                <div className="flex gap-2 border p-1 border-purple-400 text-purple-200">
+                  <img 
+                    src={AdobeXD}
+                    alt=""
+                    className="h-6 -ml-2 -mr-2" 
+                  />
+                  <a>
+                    AdobeXD
+                  </a>
+                </div>
               </div>
               <p>
                   Project Info:
@@ -372,11 +391,112 @@ const RealHomePage = () => {
               </div>
           </div>
 
-          <div className="border border-emerald-600 w-full h-90 bg-black mb-3">
+          <div className="border border-emerald-600 w-full h-90 bg-cover bg-center backdrop-brightness-1000"
+          style={{ backgroundImage: `url(${Wires})` }}>
+            <div
+              className="h-full w-full bg-cover bg-center pt-12 pl-62 pb-12 pr-22"
+              style={{ backgroundImage: `url(${ScreenPNG})` }}
+            >
+              <div className="border border-zinc-500 w-full h-full bg-black p-3 overflow-y-auto scrollbar-thin scrollbar-thumb-gray-500 scrollbar-track-none">
+
+                <div className="text-gray-100 text-1xl  font-light ">
+                  <div className="flex flex-col items-center border-b pb-2 mb-2">
+                    <p>
+                      Internal Operating System
+                    </p>
+                    ---
+                    <p>
+                      Users Toolkit
+                    </p>
+                  </div>
+
+                  <div className="flex flex-row gap-2 w-full h-full flex-wrap items-center justify-center">
+                    <div className="">
+                      <img 
+                        src={JavaScript} 
+                        alt=""
+                        className="h-15 w-15 border border-yellow-200 p-1" 
+                      />
+                    </div>
+                    <img 
+                        src={TypeScript} 
+                        alt=""
+                        className="h-15 w-15 border border-blue-600 p-1" 
+                      />
+                      <img 
+                        src={React} 
+                        alt=""
+                        className="h-15 w-15 border border-cyan-600 p-1" 
+                      />
+                      <img 
+                        src={Tailwind} 
+                        alt=""
+                        className="h-15 w-15 border border-cyan-400 p-1" 
+                      />
+                      <img 
+                        src={NodeJsIcon}
+                        alt=""
+                        className="h-15 w-15 border border-green-600 p-1" 
+                      />
+                      <img 
+                        src={Git} 
+                        alt=""
+                        className="h-15 w-15 border border-orange-500" 
+                      />
+                      <img 
+                        src={Firebase} 
+                        alt=""
+                        className="h-15 w-15 border border-yellow-300 p-1" 
+                      />
+                      <img 
+                        src={MongoDB} 
+                        alt=""
+                        className="h-15 w-15 border border-green-300" 
+                      />
+                      <img 
+                        src={MySQL} 
+                        alt=""
+                        className="h-15 w-15 border" 
+                      />
+
+                      <img 
+                        src={Photopea} 
+                        alt=""
+                        className="h-15 w-15 border border-cyan-400" 
+                      />
+
+                      <img 
+                        src={Mongoose} 
+                        alt=""
+                        className="h-15 w-15 border border-red-600" 
+                      />
+                  </div>
+                </div>
+              </div>
+            </div>
 
           </div>
 
-          <div className="border border-emerald-600 w-full h-43  bg-black">
+          <div className="border border-emerald-600 w-full h-42  bg-black p-2 flex justify-center mt-3">
+            <div className="flex flex-row overflow-hidden border border-emerald-600 p-2">
+            <img 
+              src={WaveCode} 
+              alt="" 
+              className="h-full -mr-px"/>
+            <img 
+              src={WaveCode} 
+              alt="" 
+              className="h-full scale-x-[-1] -mr-px"/>
+            <img 
+              src={WaveCode} 
+              alt="" 
+              className="h-full -mr-px"/>
+            <img 
+              src={WaveCode} 
+              alt="" 
+              className="h-full scale-x-[-1]"/>
+            </div>
+
 
           </div>
           
