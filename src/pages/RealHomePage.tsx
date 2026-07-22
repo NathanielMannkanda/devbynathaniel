@@ -6,6 +6,7 @@ import GithubLogo from "../assets/images/social-icons/github-logo.png";
 import LinkedInLogo from "../assets/images/social-icons/linkedin-logo.png";
 import EmailLogo from "../assets/images/social-icons/email-icon.png";
 import WhattsappLogo from "../assets/images/social-icons/whattsapp-icon.png";
+import CvIcon from "../assets/images/social-icons/cv-icon.png";
 
 import WorkTracker from "../assets/images/thumbnails/work-tracker-thumbnail.png";
 import Ecommerce from "../assets/images/thumbnails/e-commerce-thumbnail.png"
@@ -24,6 +25,7 @@ import Mongoose from "../assets/images/tech-icons/mongoose.png";
 import MySQL from "../assets/images/tech-icons/MySQL-Logo.png";
 import AdobeXD from "../assets/images/tech-icons/adobe-xd-logo.png";
 import NodeJsIcon from "../assets/images/tech-icons/nodejs.png"
+import GSAPIcon from "../assets/images/tech-icons/gsap-icon.jpg"
 
 import CyberCity from "../assets/gifs/3d-cyber-city.gif"
 import CatWalking from "../assets/gifs/cat-walking.gif"
@@ -165,6 +167,7 @@ const RealHomePage = () => {
                     TypeScript
                   </a>
                 </div>
+                
 
                 <div className="flex gap-2 border p-1 border-blue-400 text-blue-200">
                   <img
@@ -176,6 +179,18 @@ const RealHomePage = () => {
                     Tailwind
                   </a>
                 </div>
+
+                <div className="flex gap-2 border p-1 border-green-900 text-green-600">
+                  <img
+                    src={GSAPIcon}
+                    alt=""
+                    className="h-6"
+                  />
+                  <a>
+                    GSAP
+                  </a>
+                </div>
+
               </div>
               <p>
                 Project Info:
@@ -238,6 +253,17 @@ const RealHomePage = () => {
                   </a>
                 </div>
 
+                <div className="flex gap-2 border p-1 border-green-900 text-green-600">
+                  <img
+                    src={GSAPIcon}
+                    alt=""
+                    className="h-6"
+                  />
+                  <a>
+                    GSAP
+                  </a>
+                </div>
+
                 <div className="flex gap-2 border p-1 border-blue-600 text-blue-400">
                   <img
                     src={TypeScript}
@@ -265,14 +291,14 @@ const RealHomePage = () => {
               </p>
               <div className="pl-3">
                 <p>
-                  ■ I created a website that allows you to select between being a manager and a worker. Each Role has its own features.
+                  ■ I created a website that acts and an archive for old designer items, models and actors. It was also made to test animations with gsap and Photopea
                 </p>
 
                 <p>
-                  ■ I used firebase as a backend that is able to store and update information.
+                  ■ I used Photopea to create the layout for the images i would animate then used gsap to animate them.
                 </p>
                 <p>
-                  ■ I used TailwindCSS to make a simple design as well as React for reusable components.
+                  ■ I used TailwindCSS and TypeScript to aid with the UI of the websit, from it playing music to the overall layout.
                 </p>
               </div>
             </div>
@@ -292,7 +318,7 @@ const RealHomePage = () => {
                 Project: Health Tracker
               </h1>
               <a className="text-[#01b92f] ml-2">
-                Oct 2025 - Nov 2025
+                Feb 2026
               </a>
               <p className="ml-4">
                 Technology used:
@@ -525,28 +551,61 @@ const RealHomePage = () => {
                 Socials:
               </p>
               <div className="flex flex-row gap-2">
-                <img
-                  src={EmailLogo}
-                  alt=""
-                  className="h-8"
-                />
-                <img
-                  src={WhattsappLogo}
-                  alt=""
-                  className="h-8"
-                />
+                <a 
+                  href="mailto:nathanielmankanda8@gmail.com"
+                  target="_blank">
+                  <img
+                    src={EmailLogo}
+                    alt=""
+                    className="h-8 cursor-pointer"
+                  />
+                </a>
+
+                <a 
+                  href="https://wa.me/27692187694"
+                  target="_blank">
+                  <img
+                    src={WhattsappLogo}
+                    alt=""
+                    className="h-8 cursor-pointerv"
+                  />
+                </a>
+                <a href="https://github.com/NathanielMannkanda"
+                  target="_blank">
                 <img
                   src={GithubLogo}
                   alt=""
-                  className="h-8"
+                  className="h-8 cursor-pointer"
                 />
-                <img
-                  src={LinkedInLogo}
-                  alt=""
-                  className="h-8"
-                />
+                </a>
+                
+                <a 
+                  href="https://www.linkedin.com/in/nathaniel-mankanda-641a63307/"
+                  target="_blank">
+                  <img
+                    src={LinkedInLogo}
+                    alt=""
+                    className="h-8 cursor-pointer"
+                  />
+                </a>
 
               </div>
+            </div>
+
+            <div className="text-[#00ff41] flex flex-col items-center ml-auto">
+              <p className="border border-emerald-600 pr-1 pl-1 mb-1">
+                My CV
+              </p>
+              <a 
+                href=""
+                target="_blank"
+              >
+                <img 
+                  src={CvIcon}
+                  alt=""
+                  className="border border-emerald-600 p-2" 
+                />
+              </a>
             </div>
 
             <img
