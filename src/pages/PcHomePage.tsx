@@ -16,6 +16,7 @@ import ExpandArrow from "../assets/pc-icons/expand-arrow.png"
 import OutLook from "../assets/pc-icons/outlook-icon.png"
 import FileExplorer from "../assets/pc-icons/file-icon.png"
 import NewDesktop from "../assets/pc-icons/new-desktop-icon.png"
+import Cat from "../assets/images/coffee-cat.png"
 
 const PcHomePage: React.FC = () => {
   const [currentDateTime, setCurrentDateTime] 
@@ -78,13 +79,13 @@ const PcHomePage: React.FC = () => {
           className="w-full h-screen bg-[url('/pc-wallpaer.jpg')] bg-cover bg-center p-5 text-white"
         >
           <section className="flex flex-row gap-5 w-full">
-            <div className="flex flex-col items-center justify-center w-24.5 p-2 rounded-md border border-transparent hover:border-zinc-700 hover:bg-gray-500/20 cursor-pointer transition-all">
+            <div className="flex flex-col items-center justify-center w-fit p-2 rounded-md border border-transparent hover:border-zinc-700 hover:bg-gray-500/20 cursor-pointer transition-all">
             <img 
               src={RecycleBinIcon}
               alt=""
               className="w-20" 
               />
-              <p>
+              <p className="">
                 Recycle Bin
               </p>
             </div>
@@ -95,7 +96,7 @@ const PcHomePage: React.FC = () => {
             <img 
               src={GoogleLogo}
               alt=""
-              className="w-17 mb-2" 
+              className="w-17 mb-2 active:cursor-progress" 
               />
               <p>
                 Google
@@ -133,6 +134,11 @@ const PcHomePage: React.FC = () => {
         <div className="w-full h-full max-h-15 bg-zinc-900 absolute bottom-0 border-t border-zinc-500 pl-5 pt-5 pb-5 pr-5 flex items-center justify-between">
 
           <div className="flex flex-row items-center">
+            <img 
+              src={Cat} 
+              alt="" 
+              className="w-15 h-15"
+            />
             <p className="text-white text-2xl">
               DevByNathaniel
             </p>

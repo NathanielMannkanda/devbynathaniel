@@ -42,107 +42,26 @@ const RealHomePage = () => {
         {/*Left*/}
         <div className=" w-full xl:flex-1 max-w-150 h-150 xl:h-230">
 
-          <div className="text-[#00ff41] text-3xl p-3 border-emerald-600 h-10 border flex items-center mb-3 bg-black">
+          <div className="text-[#00ff41] text-3xl p-3 border-emerald-600 h-fit border flex items-center mb-3 bg-black">
             <p>
               Completed Tasks/ Project Portfolio
             </p>
           </div>
 
-          <div className="border border-emerald-600 h-137 bg-black xl:h-216 xl:max-h-216 overflow-y-auto scrollbar-thin scrollbar-thumb-green-600 scrollbar-track-none p-5">
-            
-            <div className="text-[#00ff41] mb-5 pb-5 border-emerald-600 border-b">
-              <a 
-                href="https://trill-boutique.vercel.app/"
-                target='_blank'
-                >
-                <img 
-                  src={Trill}
-                  alt=""
-                  className="border border-emerald-600 p-2 mb-3" 
-                  />
-              </a>
-              <h1 className="text-xl">
-                Project: Trill Boutique
-              </h1>
-              <a className="text-[#01b92f] ml-2">
-                July 2026
-              </a>
-              <p className="ml-4">
-                  Technology used:
-              </p>
+          <div className="border border-emerald-600 h-137 bg-black xl:h-202 xl:max-h-202 overflow-y-auto scrollbar-thin scrollbar-thumb-green-600 scrollbar-track-none p-5">
 
-              <div className="flex gap-3 mt-2 mb-2 justify-center">
-                <div className="flex gap-2 border p-1 border-blue-600 text-blue-400">
-                  <img 
-                    src={React}
-                    alt=""
-                    className="h-6" 
-                  />
-                  <a>
-                    React
-                  </a>
-                </div>
 
-                <div className="flex gap-2 border p-1 border-green-400 text-green-300">
-                  <img 
-                    src={Photopea}
-                    alt=""
-                    className="h-6" 
-                  />
-                  <a>
-                    Photopea
-                  </a>
-                </div>
-
-                <div className="flex gap-2 border p-1 border-blue-600 text-blue-400">
-                  <img 
-                    src={TypeScript}
-                    alt=""
-                    className="h-6" 
-                  />
-                  <a>
-                    TypeScript
-                  </a>
-                </div>
-
-                <div className="flex gap-2 border p-1 border-blue-400 text-blue-200">
-                  <img 
-                    src={Tailwind}
-                    alt=""
-                    className="h-6" 
-                  />
-                  <a>
-                    Tailwind
-                  </a>
-                </div>
-              </div>
-              <p>
-                  Project Info:
-              </p>
-              <div className="pl-3">
-                <p>
-                  ■ I created a website that allows you to select between being a manager and a worker. Each Role has its own features.
-                </p>
-
-                <p>
-                  ■ I used firebase as a backend that is able to store and update information.
-                </p>
-                <p>
-                  ■ I used TailwindCSS to make a simple design as well as React for reusable components.
-                </p>
-              </div>
-            </div>
 
             <div className="text-[#00ff41] mb-5 pb-5 border-emerald-600 border-b">
-              <a 
+              <a
                 href="https://work-tracker-five-beta.vercel.app/"
                 target='_blank'
-                >
-                <img 
+              >
+                <img
                   src={WorkTracker}
                   alt=""
-                  className="border border-emerald-600 p-2 mb-3" 
-                  />
+                  className="border border-emerald-600 p-2 mb-3"
+                />
               </a>
               <h1 className="text-xl">
                 Project: Work Tracker
@@ -151,25 +70,25 @@ const RealHomePage = () => {
                 April 2026
               </a>
               <p className="ml-4">
-                  Technology used:
+                Technology used:
               </p>
 
-              <div className="flex gap-3 mt-2 mb-2 justify-center">
+              <div className="flex flex-wrap gap-3 mt-2 mb-2 justify-center">
                 <div className="flex gap-2 border p-1 border-blue-600 text-blue-400">
-                  <img 
+                  <img
                     src={React}
                     alt=""
-                    className="h-6" 
+                    className="h-6"
                   />
                   <a>
                     React
                   </a>
                 </div>
                 <div className="flex gap-2 border p-1 border-orange-600 text-orange-400">
-                  <img 
+                  <img
                     src={Firebase}
                     alt=""
-                    className="h-6" 
+                    className="h-6"
                   />
                   <a>
                     Firebase
@@ -177,10 +96,10 @@ const RealHomePage = () => {
                 </div>
 
                 <div className="flex gap-2 border p-1 border-blue-400 text-blue-200">
-                  <img 
+                  <img
                     src={Tailwind}
                     alt=""
-                    className="h-6" 
+                    className="h-6"
                   />
                   <a>
                     Tailwind
@@ -188,7 +107,7 @@ const RealHomePage = () => {
                 </div>
               </div>
               <p>
-                  Project Info:
+                Project Info:
               </p>
               <div className="pl-3">
                 <p>
@@ -205,15 +124,15 @@ const RealHomePage = () => {
             </div>
 
             <div className="text-[#00ff41] mb-5 pb-5 border-emerald-600 border-b">
-              <a 
+              <a
                 href="https://e-commerce-store-xi-five.vercel.app/"
                 target='_blank'
-                >
-                <img 
+              >
+                <img
                   src={Ecommerce}
                   alt=""
-                  className="border border-emerald-600 p-2 mb-3" 
-                  />
+                  className="border border-emerald-600 p-2 mb-3"
+                />
               </a>
               <h1 className="text-xl">
                 Project: E-commerce
@@ -222,25 +141,25 @@ const RealHomePage = () => {
                 Oct 2025 - Nov 2025
               </a>
               <p className="ml-4">
-                  Technology used:
+                Technology used:
               </p>
 
-              <div className="flex gap-3 mt-2 mb-2 justify-center">
+              <div className="flex gap-3 mt-2 mb-2 justify-center flex-wrap">
                 <div className="flex gap-2 border p-1 border-blue-600 text-blue-400">
-                  <img 
+                  <img
                     src={React}
                     alt=""
-                    className="h-6" 
+                    className="h-6"
                   />
                   <a>
                     React
                   </a>
                 </div>
                 <div className="flex gap-2 border p-1 border-blue-500 text-blue-400">
-                  <img 
+                  <img
                     src={TypeScript}
                     alt=""
-                    className="h-6" 
+                    className="h-6"
                   />
                   <a>
                     TypeScript
@@ -248,10 +167,10 @@ const RealHomePage = () => {
                 </div>
 
                 <div className="flex gap-2 border p-1 border-blue-400 text-blue-200">
-                  <img 
+                  <img
                     src={Tailwind}
                     alt=""
-                    className="h-6" 
+                    className="h-6"
                   />
                   <a>
                     Tailwind
@@ -259,7 +178,7 @@ const RealHomePage = () => {
                 </div>
               </div>
               <p>
-                  Project Info:
+                Project Info:
               </p>
               <div className="pl-3">
                 <p>
@@ -276,15 +195,98 @@ const RealHomePage = () => {
             </div>
 
             <div className="text-[#00ff41] mb-5 pb-5 border-emerald-600 border-b">
-              <a 
+              <a
+                href="https://trill-boutique.vercel.app/"
+                target='_blank'
+              >
+                <img
+                  src={Trill}
+                  alt=""
+                  className="border border-emerald-600 p-2 mb-3"
+                />
+              </a>
+              <h1 className="text-xl">
+                Project: Trill Boutique
+              </h1>
+              <a className="text-[#01b92f] ml-2">
+                July 2026
+              </a>
+              <p className="ml-4">
+                Technology used:
+              </p>
+
+              <div className="flex flex-wrap gap-3 mt-2 mb-2 justify-center">
+                <div className="flex gap-2 border p-1 border-blue-600 text-blue-400">
+                  <img
+                    src={React}
+                    alt=""
+                    className="h-6"
+                  />
+                  <a>
+                    React
+                  </a>
+                </div>
+
+                <div className="flex gap-2 border p-1 border-green-400 text-green-300">
+                  <img
+                    src={Photopea}
+                    alt=""
+                    className="h-6"
+                  />
+                  <a>
+                    Photopea
+                  </a>
+                </div>
+
+                <div className="flex gap-2 border p-1 border-blue-600 text-blue-400">
+                  <img
+                    src={TypeScript}
+                    alt=""
+                    className="h-6"
+                  />
+                  <a>
+                    TypeScript
+                  </a>
+                </div>
+
+                <div className="flex gap-2 border p-1 border-blue-400 text-blue-200">
+                  <img
+                    src={Tailwind}
+                    alt=""
+                    className="h-6"
+                  />
+                  <a>
+                    Tailwind
+                  </a>
+                </div>
+              </div>
+              <p>
+                Project Info:
+              </p>
+              <div className="pl-3">
+                <p>
+                  ■ I created a website that allows you to select between being a manager and a worker. Each Role has its own features.
+                </p>
+
+                <p>
+                  ■ I used firebase as a backend that is able to store and update information.
+                </p>
+                <p>
+                  ■ I used TailwindCSS to make a simple design as well as React for reusable components.
+                </p>
+              </div>
+            </div>
+
+            <div className="text-[#00ff41] mb-5 pb-5 border-emerald-600 border-b">
+              <a
                 href="https://health-tracker-five-ivory.vercel.app/"
                 target='_blank'
-                >
-                <img 
+              >
+                <img
                   src={Health}
                   alt=""
-                  className="border border-emerald-600 p-2 mb-3" 
-                  />
+                  className="border border-emerald-600 p-2 mb-3"
+                />
               </a>
               <h1 className="text-xl">
                 Project: Health Tracker
@@ -293,25 +295,25 @@ const RealHomePage = () => {
                 Oct 2025 - Nov 2025
               </a>
               <p className="ml-4">
-                  Technology used:
+                Technology used:
               </p>
 
-              <div className="flex gap-3 mt-2 mb-2 justify-center">
+              <div className="flex gap-3 mt-2 mb-2 justify-center flex-wrap">
                 <div className="flex gap-2 border p-1 border-blue-600 text-blue-400">
-                  <img 
+                  <img
                     src={React}
                     alt=""
-                    className="h-6" 
+                    className="h-6"
                   />
                   <a>
                     React
                   </a>
                 </div>
                 <div className="flex gap-2 border p-1 border-yellow-300 text-yellow-200">
-                  <img 
+                  <img
                     src={JavaScript}
                     alt=""
-                    className="h-6" 
+                    className="h-6"
                   />
                   <a>
                     JavaScript
@@ -319,20 +321,20 @@ const RealHomePage = () => {
                 </div>
 
                 <div className="flex gap-2 border p-1 border-blue-400 text-blue-200">
-                  <img 
+                  <img
                     src={Tailwind}
                     alt=""
-                    className="h-6" 
+                    className="h-6"
                   />
                   <a>
                     Tailwind
                   </a>
                 </div>
                 <div className="flex gap-2 border p-1 border-purple-400 text-purple-200">
-                  <img 
+                  <img
                     src={AdobeXD}
                     alt=""
-                    className="h-6 -ml-2 -mr-2" 
+                    className="h-6 -ml-2 -mr-2"
                   />
                   <a>
                     AdobeXD
@@ -340,7 +342,7 @@ const RealHomePage = () => {
                 </div>
               </div>
               <p>
-                  Project Info:
+                Project Info:
               </p>
               <div className="pl-3">
                 <p>
@@ -356,43 +358,43 @@ const RealHomePage = () => {
               </div>
             </div>
 
-            
+
 
           </div>
 
-          
-          
+
+
         </div>
 
         {/*Middle*/}
         <div className="w-150 h-full max-h-230 mr-3">
           <div className="border border-emerald-600 text-[#00ff41] w-full h-90 bg-black mb-3 p-3 flex flex-row">
-            <img 
-              src={CyberCity} 
-              alt="" 
+            <img
+              src={CyberCity}
+              alt=""
               className="h-full border mr-3 p-2 border-emerald-600"
-              />
-              <div className="flex flex-col justify-between">
-              <img 
-              src={CatWalking} 
-              alt="" 
-              className=" border p-2 border-emerald-600 w-fit"
+            />
+            <div className="flex flex-col justify-between">
+              <img
+                src={CatWalking}
+                alt=""
+                className=" border p-2 border-emerald-600 w-fit"
               />
 
               <p className="text-xl font-bold">
                 Welcome to the cyberworld
               </p>
 
-              <img 
-                src={MentalCode} 
+              <img
+                src={MentalCode}
                 alt=""
-                className="border p-2 border-emerald-600" 
-                />
-              </div>
+                className="border p-2 border-emerald-600"
+              />
+            </div>
           </div>
 
           <div className="border border-emerald-600 w-full h-90 bg-cover bg-center backdrop-brightness-1000"
-          style={{ backgroundImage: `url(${Wires})` }}>
+            style={{ backgroundImage: `url(${Wires})` }}>
             <div
               className="h-full w-full bg-cover bg-center pt-12 pl-62 pb-12 pr-22"
               style={{ backgroundImage: `url(${ScreenPNG})` }}
@@ -412,64 +414,64 @@ const RealHomePage = () => {
 
                   <div className="flex flex-row gap-2 w-full h-full flex-wrap items-center justify-center">
                     <div className="">
-                      <img 
-                        src={JavaScript} 
+                      <img
+                        src={JavaScript}
                         alt=""
-                        className="h-15 w-15 border border-yellow-200 p-1" 
+                        className="h-15 w-15 border border-yellow-200 p-1"
                       />
                     </div>
-                    <img 
-                        src={TypeScript} 
-                        alt=""
-                        className="h-15 w-15 border border-blue-600 p-1" 
-                      />
-                      <img 
-                        src={React} 
-                        alt=""
-                        className="h-15 w-15 border border-cyan-600 p-1" 
-                      />
-                      <img 
-                        src={Tailwind} 
-                        alt=""
-                        className="h-15 w-15 border border-cyan-400 p-1" 
-                      />
-                      <img 
-                        src={NodeJsIcon}
-                        alt=""
-                        className="h-15 w-15 border border-green-600 p-1" 
-                      />
-                      <img 
-                        src={Git} 
-                        alt=""
-                        className="h-15 w-15 border border-orange-500" 
-                      />
-                      <img 
-                        src={Firebase} 
-                        alt=""
-                        className="h-15 w-15 border border-yellow-300 p-1" 
-                      />
-                      <img 
-                        src={MongoDB} 
-                        alt=""
-                        className="h-15 w-15 border border-green-300" 
-                      />
-                      <img 
-                        src={MySQL} 
-                        alt=""
-                        className="h-15 w-15 border" 
-                      />
+                    <img
+                      src={TypeScript}
+                      alt=""
+                      className="h-15 w-15 border border-blue-600 p-1"
+                    />
+                    <img
+                      src={React}
+                      alt=""
+                      className="h-15 w-15 border border-cyan-600 p-1"
+                    />
+                    <img
+                      src={Tailwind}
+                      alt=""
+                      className="h-15 w-15 border border-cyan-400 p-1"
+                    />
+                    <img
+                      src={NodeJsIcon}
+                      alt=""
+                      className="h-15 w-15 border border-green-600 p-1"
+                    />
+                    <img
+                      src={Git}
+                      alt=""
+                      className="h-15 w-15 border border-orange-500"
+                    />
+                    <img
+                      src={Firebase}
+                      alt=""
+                      className="h-15 w-15 border border-yellow-300 p-1"
+                    />
+                    <img
+                      src={MongoDB}
+                      alt=""
+                      className="h-15 w-15 border border-green-300"
+                    />
+                    <img
+                      src={MySQL}
+                      alt=""
+                      className="h-15 w-15 border"
+                    />
 
-                      <img 
-                        src={Photopea} 
-                        alt=""
-                        className="h-15 w-15 border border-cyan-400" 
-                      />
+                    <img
+                      src={Photopea}
+                      alt=""
+                      className="h-15 w-15 border border-cyan-400"
+                    />
 
-                      <img 
-                        src={Mongoose} 
-                        alt=""
-                        className="h-15 w-15 border border-red-600" 
-                      />
+                    <img
+                      src={Mongoose}
+                      alt=""
+                      className="h-15 w-15 border border-red-600"
+                    />
                   </div>
                 </div>
               </div>
@@ -479,91 +481,91 @@ const RealHomePage = () => {
 
           <div className="border border-emerald-600 w-full h-42  bg-black p-2 flex justify-center mt-3">
             <div className="flex flex-row overflow-hidden border border-emerald-600 p-2">
-            <img 
-              src={WaveCode} 
-              alt="" 
-              className="h-full -mr-px"/>
-            <img 
-              src={WaveCode} 
-              alt="" 
-              className="h-full scale-x-[-1] -mr-px"/>
-            <img 
-              src={WaveCode} 
-              alt="" 
-              className="h-full -mr-px"/>
-            <img 
-              src={WaveCode} 
-              alt="" 
-              className="h-full scale-x-[-1]"/>
+              <img
+                src={WaveCode}
+                alt=""
+                className="h-full -mr-px" />
+              <img
+                src={WaveCode}
+                alt=""
+                className="h-full scale-x-[-1] -mr-px" />
+              <img
+                src={WaveCode}
+                alt=""
+                className="h-full -mr-px" />
+              <img
+                src={WaveCode}
+                alt=""
+                className="h-full scale-x-[-1]" />
             </div>
 
 
           </div>
-          
+
         </div>
 
         {/*Right*/}
         <div className="w-120 h-230 mr-3 overflow-clip">
 
           <div className="w-full h-30  mb-3 text-[#00ff41] flex items-center justify-center text-6xl">
-          <p className="">
-            DevByNathaniel
-          </p>
+            <p className="">
+              DevByNathaniel
+            </p>
           </div>
 
           <div className="border border-emerald-600 w-full h-30 bg-black mb-3 overflow-hidden flex items-center p-2">
-              <div className="text-[#00ff41]">
-                <p>
-                  Title: Frontend Developer
-                </p>
-                <p>
-                  Agent name: Nathaniel Mankanda
-                </p>
-                <p>
-                  Socials:
-                </p>
-                <div className="flex flex-row gap-2">
-                  <img 
-                    src={EmailLogo} 
-                    alt=""
-                    className="h-8" 
-                  />
-                  <img 
-                    src={WhattsappLogo} 
-                    alt=""
-                    className="h-8" 
-                  />
-                  <img 
-                    src={GithubLogo} 
-                    alt=""
-                    className="h-8" 
-                  />
-                  <img 
-                    src={LinkedInLogo} 
-                    alt=""
-                    className="h-8" 
-                  />
+            <div className="text-[#00ff41]">
+              <p>
+                Title: Frontend Developer
+              </p>
+              <p>
+                Agent name: Nathaniel Mankanda
+              </p>
+              <p>
+                Socials:
+              </p>
+              <div className="flex flex-row gap-2">
+                <img
+                  src={EmailLogo}
+                  alt=""
+                  className="h-8"
+                />
+                <img
+                  src={WhattsappLogo}
+                  alt=""
+                  className="h-8"
+                />
+                <img
+                  src={GithubLogo}
+                  alt=""
+                  className="h-8"
+                />
+                <img
+                  src={LinkedInLogo}
+                  alt=""
+                  className="h-8"
+                />
 
-                </div>
               </div>
-              
-              <img 
-                src={CatPfp} 
-                alt="" 
-                className="h-25 ml-auto border-emerald-600 border"
-              />
+            </div>
 
-              
+            <img
+              src={CatPfp}
+              alt=""
+              className="h-25 ml-auto border-emerald-600 border"
+            />
+
+
           </div>
 
           <div className="border border-emerald-600 w-full mt-3 h-40 bg-black mb-3">
-          
+
           </div>
 
           <div className="border border-emerald-600 w-full mt-3 h-100 bg-black mb-3">
-          
+
           </div>
-          
+
         </div>
       </div>
     </div>
