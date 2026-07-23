@@ -1,5 +1,7 @@
-import { useEffect, useState } from "react"
+import { useEffect, useRef, useState } from "react"
 import { useNavigate } from "react-router-dom"
+import gsap from "gsap";
+import { useGSAP } from "@gsap/react";
 
 import MorpheusImg from "../assets/images/morpheus-choose.png"
 import RecycleBinIcon from "../assets/pc-icons/recycle-bin-icon.png"
@@ -25,6 +27,9 @@ const PcHomePage: React.FC = () => {
   const [showMyPCWindow, setShowMyPCWindow] = useState(false);
   const navigate = useNavigate();
 
+  const pageRef = useRef<HTMLDivElement>(null);
+
+
   const [showMatrixChoice, setShowMatrixChoice] = useState(false);
 
   useEffect(() => {
@@ -42,6 +47,24 @@ const PcHomePage: React.FC = () => {
   const currentDate = `${currentDateTime.getFullYear()}/${String(
     currentDateTime.getMonth() + 1
   ).padStart(2, "0")}/${String(currentDateTime.getDate()).padStart(2, "0")}`;
+
+  useGSAP(() => {
+    gsap.from(".desktop-icon", {
+      opacity: 0,
+      y: -40,
+      stagger: 0.1,
+      duration: 0.6,
+      ease: "back.out"
+    });
+
+    gsap.from(".taskbar", {
+      y: 80,
+      opacity: 0,
+      duration: 0.8,
+      ease: "power3.out"
+    });
+  }, { scope: pageRef });
+
   if (showMatrixChoice) {
     return (
       <div className="w-screen h-screen bg-black flex flex-col items-center justify-center">
@@ -73,19 +96,20 @@ const PcHomePage: React.FC = () => {
     );
   }
 
+
   return (
-    <>
+    <div ref={pageRef}>
 
       <div className="flex flex-col overflow-hidden min-h-screen max-h-screen">
         <div
           className="w-full h-screen bg-[url('/pc-wallpaer.jpg')] bg-cover bg-center p-5 text-white"
         >
           <section className="flex flex-row gap-5 w-full">
-            <div className="flex flex-col items-center justify-center w-fit p-2 rounded-md border border-transparent hover:border-zinc-700 hover:bg-gray-500/20 cursor-pointer transition-all">
+            <div className=" flex flex-col items-center justify-center w-fit p-2 rounded-md border border-transparent hover:border-zinc-700 hover:bg-gray-500/20 cursor-pointer transition-all">
               <img
                 src={RecycleBinIcon}
                 alt=""
-                className="w-20"
+                className="w-20 desktop-icon"
               />
               <p className="">
                 Recycle Bin
@@ -98,7 +122,7 @@ const PcHomePage: React.FC = () => {
               <img
                 src={GoogleLogo}
                 alt=""
-                className="w-17 mb-2 active:cursor-progress"
+                className="w-17 mb-2 active:cursor-progress desktop-icon"
               />
               <p>
                 Google
@@ -111,7 +135,7 @@ const PcHomePage: React.FC = () => {
               <img
                 src={EdgeLogo}
                 alt=""
-                className="w-20"
+                className="w-20 desktop-icon"
               />
               <p>
                 Edge
@@ -126,7 +150,7 @@ const PcHomePage: React.FC = () => {
               <img
                 src={MyPC}
                 alt=""
-                className="w-20"
+                className="w-20 desktop-icon"
               />
               <p className="">
                 My PC
@@ -267,7 +291,7 @@ const PcHomePage: React.FC = () => {
           </>
         )}
 
-        <div className="w-full h-full max-h-15 bg-zinc-900 absolute bottom-0 border-t border-zinc-500 pl-5 pt-5 pb-5 pr-5 flex items-center justify-between">
+        <div className="taskbar w-full h-full max-h-15 bg-zinc-900 absolute bottom-0 border-t border-zinc-500 pl-5 pt-5 pb-5 pr-5 flex items-center justify-between">
 
           <div className="flex flex-row items-center">
             <img
@@ -400,7 +424,7 @@ const PcHomePage: React.FC = () => {
 
         </div>
       </div>
-    </>
+    </div>
   )
 }
 
