@@ -28,7 +28,7 @@ const PcHomePage: React.FC = () => {
   const navigate = useNavigate();
 
   const pageRef = useRef<HTMLDivElement>(null);
-
+  const explorerWindowRef = useRef<HTMLDivElement>(null);
 
   const [showMatrixChoice, setShowMatrixChoice] = useState(false);
 
@@ -64,6 +64,44 @@ const PcHomePage: React.FC = () => {
       ease: "power3.out"
     });
   }, { scope: pageRef });
+
+  useEffect(() => {
+
+    if (!showExplorerWindow) return;
+
+    gsap.fromTo(
+      explorerWindowRef.current,
+      {
+        opacity: 0,
+        scale: 0.95,
+        y: 20,
+        filter: "blur(6px)",
+      },
+      {
+        opacity: 1,
+        scale: 1,
+        y: 0,
+        filter: "blur(0px)",
+        duration: 0.3,
+        ease: "power2.out",
+      }
+    );
+
+
+}, [showExplorerWindow]);
+
+  const closeExplorerWindow = () => {
+      gsap.to(explorerWindowRef.current, {
+        opacity: 0,
+        scale: 0.9,
+        y: 30,
+        duration: 0.25,
+        ease: "power2.in",
+        onComplete: () => {
+          setShowExplorerWindow(false);
+        },
+      });
+    };
 
   if (showMatrixChoice) {
     return (
@@ -170,7 +208,9 @@ const PcHomePage: React.FC = () => {
             />
 
             {/* Explorer Window */}
-            <div className="fixed z-50 left-1/2 top-1/2 w-212.5 h-137.5 -translate-x-1/2 -translate-y-1/2 rounded-xl overflow-hidden shadow-2xl border border-zinc-600 bg-white">
+            <div 
+              ref={explorerWindowRef}
+              className="fixed z-50 left-1/2 top-1/2 w-212.5 h-137.5 -translate-x-1/2 -translate-y-1/2 rounded-xl overflow-hidden shadow-2xl border border-zinc-600 bg-white">
 
               {/* Title Bar */}
               <div className="h-12 bg-zinc-900 flex items-center justify-between border-b border-zinc-300 px-4">
@@ -190,7 +230,7 @@ const PcHomePage: React.FC = () => {
                 <div className="flex h-full">
 
                   <button 
-                    onClick={() => setShowExplorerWindow(false)}
+                    onClick={closeExplorerWindow}
                     className="w-12 hover:bg-zinc-700 transition text-white">
                     —
                   </button>
@@ -200,7 +240,7 @@ const PcHomePage: React.FC = () => {
                   </button>
 
                   <button
-                    onClick={() => setShowExplorerWindow(false)}
+                    onClick={closeExplorerWindow}
                     className="w-12 text-white hover:bg-red-600 hover:text-white transition"
                   >
                     ✕
@@ -235,7 +275,9 @@ const PcHomePage: React.FC = () => {
             />
 
             {/* Explorer Window */}
-            <div className="fixed z-50 left-1/2 top-1/2 w-212.5 h-137.5 -translate-x-1/2 -translate-y-1/2 rounded-xl overflow-hidden shadow-2xl border border-zinc-600 bg-white">
+            <div
+              ref={explorerWindowRef}
+              className="fixed z-50 left-1/2 top-1/2 w-212.5 h-137.5 -translate-x-1/2 -translate-y-1/2 rounded-xl overflow-hidden shadow-2xl border border-zinc-600 bg-white">
 
               {/* Title Bar */}
               <div className="h-12 bg-zinc-900 flex items-center justify-between border-b border-zinc-300 px-4">
@@ -255,7 +297,7 @@ const PcHomePage: React.FC = () => {
                 <div className="flex h-full">
 
                   <button 
-                    onClick={() => setShowMyPCWindow(false)}
+                    onClick={closeExplorerWindow}
                     className="w-12 hover:bg-zinc-700 transition text-white">
                     —
                   </button>
@@ -265,7 +307,7 @@ const PcHomePage: React.FC = () => {
                   </button>
 
                   <button
-                    onClick={() => setShowMyPCWindow(false)}
+                    onClick={closeExplorerWindow}
                     className="w-12 text-white hover:bg-red-600 hover:text-white transition"
                   >
                     ✕
