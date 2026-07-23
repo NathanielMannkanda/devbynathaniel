@@ -3,7 +3,6 @@ import { useNavigate } from "react-router-dom"
 import gsap from "gsap";
 import { useGSAP } from "@gsap/react";
 
-import MorpheusImg from "../assets/images/morpheus-choose.png"
 import RecycleBinIcon from "../assets/pc-icons/recycle-bin-icon.png"
 import GoogleLogo from "../assets/pc-icons/google_icon.png"
 import EdgeLogo from "../assets/pc-icons/edge-logo.png"
@@ -29,8 +28,6 @@ const PcHomePage: React.FC = () => {
 
   const pageRef = useRef<HTMLDivElement>(null);
   const explorerWindowRef = useRef<HTMLDivElement>(null);
-
-  const [showMatrixChoice, setShowMatrixChoice] = useState(false);
 
   useEffect(() => {
     const interval = setInterval(() => {
@@ -103,36 +100,7 @@ const PcHomePage: React.FC = () => {
       });
     };
 
-  if (showMatrixChoice) {
-    return (
-      <div className="w-screen h-screen bg-black flex flex-col items-center justify-center">
-
-        <img
-          src={MorpheusImg}
-          className="w-125"
-        />
-
-        <h1 className="text-white text-4xl font-bold mt-8 mb-8">
-          Choose wisely...
-        </h1>
-
-        <div className="flex gap-32">
-
-          <button
-            onClick={() => navigate("/redpill")}
-            className="w-26 h-16 rounded-full bg-red-600 hover:bg-red-500 transition cursor-pointer"
-          />
-
-          <button
-            onClick={() => setShowMatrixChoice(false)}
-            className="w-26 h-16 rounded-full bg-blue-600 hover:bg-blue-500 transition cursor-pointer"
-          />
-
-        </div>
-
-      </div>
-    );
-  }
+  
 
 
   return (
@@ -155,7 +123,7 @@ const PcHomePage: React.FC = () => {
             </div>
 
             <div
-              onClick={() => setShowMatrixChoice(true)}
+              onClick={() => navigate("/matrix")}
               className="flex flex-col items-center justify-center w-24.5 p-2 rounded-md border border-transparent hover:border-zinc-700 hover:bg-gray-500/20 cursor-pointer transition-all">
               <img
                 src={GoogleLogo}
