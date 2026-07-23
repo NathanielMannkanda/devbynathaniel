@@ -9,6 +9,7 @@ import LinkedInLogo from "../assets/images/social-icons/linkedin-logo.png";
 import EmailLogo from "../assets/images/social-icons/email-icon.png";
 import WhattsappLogo from "../assets/images/social-icons/whattsapp-icon.png";
 import CvIcon from "../assets/images/social-icons/cv-icon.png";
+import CV from "../assets/Nathaniel-Mankanda-Cv.pdf";
 
 import WorkTracker from "../assets/images/thumbnails/work-tracker-thumbnail.png";
 import Ecommerce from "../assets/images/thumbnails/e-commerce-thumbnail.png"
@@ -637,7 +638,7 @@ const RealHomePage = () => {
                 My CV
               </p>
               <a
-                href=""
+                href={CV}
                 target="_blank"
               >
                 <img
