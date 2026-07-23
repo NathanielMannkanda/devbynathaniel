@@ -22,6 +22,7 @@ const PcHomePage: React.FC = () => {
   const [currentDateTime, setCurrentDateTime]
     = useState(new Date());
   const [showExplorerWindow, setShowExplorerWindow] = useState(false);
+  const [showMyPCWindow, setShowMyPCWindow] = useState(false);
   const navigate = useNavigate();
 
   const [showMatrixChoice, setShowMatrixChoice] = useState(false);
@@ -119,7 +120,9 @@ const PcHomePage: React.FC = () => {
           </section>
 
           <section className="flex flex-row gap-5 w-full">
-            <div className="flex flex-col items-center justify-center w-24.5 p-2 rounded-md border border-transparent hover:border-zinc-700 hover:bg-gray-500/20 cursor-pointer transition-all">
+            <div 
+              onClick={() => setShowMyPCWindow(true)}
+              className="flex flex-col items-center justify-center w-24.5 p-2 rounded-md border border-transparent hover:border-zinc-700 hover:bg-gray-500/20 cursor-pointer transition-all">
               <img
                 src={MyPC}
                 alt=""
@@ -191,6 +194,71 @@ const PcHomePage: React.FC = () => {
                 <h1 className="text-3xl font-semibold text-zinc-700 text-center">
                   You really use Explorer?... <br />
                   Go to Google.
+                </h1>
+
+              </div>
+
+            </div>
+          </>
+        )}
+
+        {showMyPCWindow && (
+          <>
+            {/* Background overlay */}
+            <div
+              className="fixed inset-0 bg-black/20 z-40"
+              onClick={() => setShowMyPCWindow(false)}
+            />
+
+            {/* Explorer Window */}
+            <div className="fixed z-50 left-1/2 top-1/2 w-212.5 h-137.5 -translate-x-1/2 -translate-y-1/2 rounded-xl overflow-hidden shadow-2xl border border-zinc-600 bg-white">
+
+              {/* Title Bar */}
+              <div className="h-12 bg-zinc-900 flex items-center justify-between border-b border-zinc-300 px-4">
+
+                <div className="flex items-center gap-3">
+                  <img
+                    src={MyPC}
+                    className="w-5 h-5"
+                    alt=""
+                  />
+                  <span className="text-sm text-white font-medium">
+                    MyPC
+                  </span>
+                </div>
+
+                {/* Window Buttons */}
+                <div className="flex h-full">
+
+                  <button 
+                    onClick={() => setShowMyPCWindow(false)}
+                    className="w-12 hover:bg-zinc-700 transition text-white">
+                    —
+                  </button>
+
+                  <button className="w-12 hover:bg-zinc-700 transition text-white">
+                    □
+                  </button>
+
+                  <button
+                    onClick={() => setShowMyPCWindow(false)}
+                    className="w-12 text-white hover:bg-red-600 hover:text-white transition"
+                  >
+                    ✕
+                  </button>
+
+                </div>
+              </div>
+
+              {/* Toolbar */}
+              <div className="h-14 bg-[#fafafa] border-b border-zinc-200" />
+
+              {/* Content */}
+              <div className="flex items-center justify-center h-[calc(100%-104px)] bg-white">
+
+                <h1 className="text-3xl font-semibold text-zinc-700 text-center">
+                  Thanks for taking time to check out my website <br />
+                  Go to Google for a surprise :')
                 </h1>
 
               </div>
