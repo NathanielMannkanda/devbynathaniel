@@ -1,5 +1,7 @@
 import MatrixCodeRain from "../componenets/MatrixCodeRain";
 import { GridPattern } from "@/component/ui/grid-pattern";
+import emailjs from "@emailjs/browser"
+import React, { useRef, useState, type FormEvent } from 'react';
 
 import CatPfp from "../assets/images/coffee-cat.png";
 import GithubLogo from "../assets/images/social-icons/github-logo.png";
@@ -18,7 +20,7 @@ import TypeScript from "../assets/images/tech-icons/typescript-icon.png";
 import JavaScript from "../assets/images/tech-icons/javascript-icon.png";
 import Photopea from "../assets/images/tech-icons/photopea.png";
 import Firebase from "../assets/images/tech-icons/firebase-icon.png";
-import React from "../assets/images/tech-icons/react-icon.png";
+import ReactIcon from "../assets/images/tech-icons/react-icon.png";
 import Git from "../assets/images/tech-icons/git-icon.png";
 import MongoDB from "../assets/images/tech-icons/mongo-db.png";
 import Mongoose from "../assets/images/tech-icons/mongoose.png";
@@ -35,6 +37,44 @@ import ScreenPNG from "../assets/images/screen-png.png"
 import Wires from "../assets/images/wires.jpg"
 
 const RealHomePage = () => {
+  const form = useRef<HTMLFormElement>(null);
+  type MessageState = {
+    type: "success" | "error";
+    text: string;
+  } | null;
+
+  const [message, setMessage] = useState<MessageState>(null);
+
+  const sendEmail = (e: FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+
+    if (!form.current) return;
+
+    emailjs
+      .sendForm(
+        "service_jmidaet",
+        "template_qvnoz8h",
+        form.current,
+        "3OwFHv6oeBkDD7e31"
+      )
+      .then(() => {
+        setMessage({
+          type: "success",
+          text: "Message sent successfully!",
+        });
+
+        form.current?.reset();
+      })
+      .catch(() => {
+        setMessage({
+          type: "error",
+          text: "Failed to send message.",
+        });
+      });
+  };
+
+
+
   return (
     <div className="relative min-h-screen overflow-hidden">
       <GridPattern />
@@ -78,7 +118,7 @@ const RealHomePage = () => {
               <div className="flex flex-wrap gap-3 mt-2 mb-2 justify-center">
                 <div className="flex gap-2 border p-1 border-blue-600 text-blue-400">
                   <img
-                    src={React}
+                    src={ReactIcon}
                     alt=""
                     className="h-6"
                   />
@@ -149,7 +189,7 @@ const RealHomePage = () => {
               <div className="flex gap-3 mt-2 mb-2 justify-center flex-wrap">
                 <div className="flex gap-2 border p-1 border-blue-600 text-blue-400">
                   <img
-                    src={React}
+                    src={ReactIcon}
                     alt=""
                     className="h-6"
                   />
@@ -167,7 +207,7 @@ const RealHomePage = () => {
                     TypeScript
                   </a>
                 </div>
-                
+
 
                 <div className="flex gap-2 border p-1 border-blue-400 text-blue-200">
                   <img
@@ -233,12 +273,12 @@ const RealHomePage = () => {
               <div className="flex flex-wrap gap-3 mt-2 mb-2 justify-center">
                 <div className="flex gap-2 border p-1 border-blue-600 text-blue-400">
                   <img
-                    src={React}
+                    src={ReactIcon}
                     alt=""
                     className="h-6"
                   />
                   <a>
-                    React
+                    ReactI
                   </a>
                 </div>
 
@@ -327,12 +367,12 @@ const RealHomePage = () => {
               <div className="flex gap-3 mt-2 mb-2 justify-center flex-wrap">
                 <div className="flex gap-2 border p-1 border-blue-600 text-blue-400">
                   <img
-                    src={React}
+                    src={ReactIcon}
                     alt=""
                     className="h-6"
                   />
                   <a>
-                    React
+                    ReactIcon
                   </a>
                 </div>
                 <div className="flex gap-2 border p-1 border-yellow-300 text-yellow-200">
@@ -452,7 +492,7 @@ const RealHomePage = () => {
                       className="h-15 w-15 border border-blue-600 p-1"
                     />
                     <img
-                      src={React}
+                      src={ReactIcon}
                       alt=""
                       className="h-15 w-15 border border-cyan-600 p-1"
                     />
@@ -533,9 +573,9 @@ const RealHomePage = () => {
         {/*Right*/}
         <div className="w-120 h-230 mr-3 overflow-clip">
 
-          <div className="w-full h-30  mb-3 text-[#00ff41] flex items-center justify-center text-6xl">
-            <p className="">
-              DevByNathaniel
+          <div className="w-full h-30  mb-3 text-[#5bff84] flex items-center justify-center">
+            <p className="-mt-10 font-[matrix-font] text-9xl ">
+              DEVBYNATHANIEL
             </p>
           </div>
 
@@ -551,7 +591,7 @@ const RealHomePage = () => {
                 Socials:
               </p>
               <div className="flex flex-row gap-2">
-                <a 
+                <a
                   href="mailto:nathanielmankanda8@gmail.com"
                   target="_blank">
                   <img
@@ -561,7 +601,7 @@ const RealHomePage = () => {
                   />
                 </a>
 
-                <a 
+                <a
                   href="https://wa.me/27692187694"
                   target="_blank">
                   <img
@@ -572,14 +612,14 @@ const RealHomePage = () => {
                 </a>
                 <a href="https://github.com/NathanielMannkanda"
                   target="_blank">
-                <img
-                  src={GithubLogo}
-                  alt=""
-                  className="h-8 cursor-pointer"
-                />
+                  <img
+                    src={GithubLogo}
+                    alt=""
+                    className="h-8 cursor-pointer"
+                  />
                 </a>
-                
-                <a 
+
+                <a
                   href="https://www.linkedin.com/in/nathaniel-mankanda-641a63307/"
                   target="_blank">
                   <img
@@ -596,14 +636,14 @@ const RealHomePage = () => {
               <p className="border border-emerald-600 pr-1 pl-1 mb-1">
                 My CV
               </p>
-              <a 
+              <a
                 href=""
                 target="_blank"
               >
-                <img 
+                <img
                   src={CvIcon}
                   alt=""
-                  className="border border-emerald-600 p-2" 
+                  className="border border-emerald-600 p-2"
                 />
               </a>
             </div>
@@ -617,17 +657,85 @@ const RealHomePage = () => {
 
           </div>
 
-          <div className="border border-emerald-600 w-full mt-3 h-40 bg-black mb-3">
-
+          <div className="border border-emerald-600 w-full mt-3 h-70 bg-black mb-3 text-[#00ff41] p-2">
+            <h1 className="text-2xl mb-2">
+              About me: 
+            </h1>
+            <p className="">
+              Hey! I'm Nathaniel Mankanda a —Front End Developer I build clean mobile and user friendly websites with a strong understanding of code languages such as JavaScript, HTML, CSS. As well as implimenting FrameWorks such as React, Tailwind and TypeScript and being able to debug real world issues. I also have have worked with databases using My SQL for relational database management and MongoDB for non-relational, distributed data (NoSQL). I have also usedFirebaseas a Backend-as-a-Service (BaaS).
+            </p>
           </div>
 
-          <div className="border border-emerald-600 w-full mt-3 h-100 bg-black mb-3">
+          <div className="w-full mt-3 h-100 mb-3">
+
+            <form ref={form} onSubmit={sendEmail} className="flex flex-col gap-3">
+
+              <input
+                type="text"
+                name="user_name"
+                placeholder="Your Name"
+                required
+                className="bg-black border border-emerald-600 p-2 text-[#00ff41]"
+              />
+
+              <input
+                type="email"
+                name="user_email"
+                placeholder="Your Email"
+                required
+                className="bg-black border border-emerald-600 p-2 text-[#00ff41]"
+              />
+
+              <textarea
+                name="message"
+                placeholder="Message"
+                rows={4}
+                required
+                className="bg-black border border-emerald-600 p-2 text-[#00ff41]"
+              />
+
+              <button
+                type="submit"
+                className="border border-emerald-600 text-[#00ff41] p-2 hover:bg-green-600 hover:text-black bg-black"
+              >
+                Send Message
+              </button>
+
+            </form>
+
+
 
           </div>
 
         </div>
       </div>
+
+      {message && (
+        <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/70">
+          <div
+            className={`w-96 border p-6 bg-black ${message.type === "success"
+                ? "border-emerald-600 text-[#00ff41]"
+                : "border-red-600 text-red-500"
+              }`}
+          >
+            <h2 className="text-xl font-bold mb-3">
+              {message.type === "success" ? "Success" : "Error"}
+            </h2>
+
+            <p>{message.text}</p>
+
+            <button
+              onClick={() => setMessage(null)}
+              className="mt-5 border border-current px-4 py-2 hover:bg-white hover:text-black transition"
+            >
+              Close
+            </button>
+          </div>
+        </div>
+      )}
     </div>
+
+
   );
 };
 

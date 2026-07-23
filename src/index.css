@@ -128,3 +128,8 @@
     @apply font-sans;
     }
 }
+
+@font-face {
+  font-family: 'matrix-font';
+  src: url('/matrix.woff') format('woff');
+}
